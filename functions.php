@@ -10,8 +10,13 @@ if (!defined('LINDA_DIR_PATH')) {
 	define('LINDA_DIR_PATH', untrailingslashit(get_template_directory()));
 }
 
-
 require_once LINDA_DIR_PATH . './inc/helpers/autoloader.php';
+
+function linda_get_theme_instance () {
+	\LINDA_THEME\Inc\LINDA_THEME::get_instance();
+}
+
+linda_get_theme_instance ();
 
 function linda_enqueue_scripts() {
 
