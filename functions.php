@@ -6,6 +6,13 @@
  */
 
 
+if (!defined('LINDA_DIR_PATH')) {
+	define('LINDA_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+
+require_once LINDA_DIR_PATH . './inc/helpers/autoloader.php';
+
 function linda_enqueue_scripts() {
 
 	//Register Styles.
